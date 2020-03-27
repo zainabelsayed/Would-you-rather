@@ -8,7 +8,8 @@ import {Tab, Tabs} from 'react-bootstrap'
 class Dashboard extends Component {
    
     render(){
-        const {questions,answerdQ}= this.props
+        const {questions,answerdQ,authedUser,user,users}= this.props
+        console.log(authedUser,answerdQ,questions,user,users)
         return(
             <div className='dashboard-list container'>
                 <Tabs fill defaultActiveKey="profile" defaultActiveKey="unanswered">
@@ -48,8 +49,10 @@ class Dashboard extends Component {
 }
 
 function mapStateToProps({questions, authedUser,users}) {
+
     let user=users[authedUser]
-    let answerdQ=null
+  
+    
     return {
         questionIds: Object.keys(questions)
             .sort((a,b)=> questions[b].timestamp-questions[a].timestamp),
@@ -57,6 +60,7 @@ function mapStateToProps({questions, authedUser,users}) {
         answerdQ:user?Object.keys(user).sort((a,b)=> questions[b].timestamp-questions[a].timestamp):null,
         questions,
         authedUser,
+        users
 
     }
 }
