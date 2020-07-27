@@ -7,6 +7,8 @@ users able to answer questions, see which questions they haven’t answered, see
 download the project or clone it from `https://github.com/zainabelsayed/Would-you-rather.git` then write `npm install` then `npm start`
 it should open the `localhost:3000` and you can start the game 
 
+## see a live <a href="https://gifted-rosalind-2ec4b3.netlify.app/">Demo</a>
+
 ## sources
 https://github.com/reduxjs/redux/blob/master/docs/introduction/Examples.md
 also I used react.semantic-ui, reactstrap and react-bootstrap to build the UI of the project 
